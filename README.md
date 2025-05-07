@@ -67,41 +67,41 @@ The final score is calculated as a weighted average of three components:
 ##  System Architecture
 
 ```
-                                ┌───────────────┐     ┌──────────────────┐     ┌─────────────────┐
-                                │  Resume (PDF) │     │ Job Description  │     │  SBERT Model    │
-                                └───────┬───────┘     └────────┬─────────┘     └────────┬────────┘
-                                        │                      │                        │
-                                        ▼                      ▼                        ▼
-                                ┌─────────────────────────────────────────────────────────────────┐
-                                │                    Data Extraction Layer                        │
-                                │  - Extract technologies using LLM                               │
-                                │  - Extract experience years                                     │
-                                │  - Generate text summaries                                      │
-                                └───────────────────────────────┬─────────────────────────────────┘
-                                                                │
-                                                                ▼
-                                ┌─────────────────────────────────────────────────────────────────┐
-                                │                    Analysis Layer                               │
-                                │  - Asymmetric Jaccard for skills                                │
-                                │  - Experience comparison with penalties                         │
-                                │  - SBERT embeddings and cosine similarity                       │
-                                └───────────────────────────────┬─────────────────────────────────┘
-                                                                │
-                                                                ▼
-                                ┌─────────────────────────────────────────────────────────────────┐
-                                │                    Scoring Layer                                │
-                                │  - Weighted average of component scores                         │
-                                │  - Explanation generation                                       │
-                                │  - Recommendations                                              │
-                                └───────────────────────────────┬─────────────────────────────────┘
-                                                                │
-                                                                ▼
-                                ┌─────────────────────────────────────────────────────────────────┐
-                                │                    Presentation Layer                           │
-                                │  - Interactive Streamlit UI                                     │
-                                │  - Visual score representations                                 │
-                                │  - Detailed analytics tabs                                      │
-                                └─────────────────────────────────────────────────────────────────┘
+                           ┌───────────────┐     ┌──────────────────┐     ┌─────────────────┐
+                           │  Resume (PDF) │     │ Job Description  │     │  SBERT Model    │
+                           └───────┬───────┘     └────────┬─────────┘     └────────┬────────┘
+                                   │                      │                        │
+                                   ▼                      ▼                        ▼
+                           ┌─────────────────────────────────────────────────────────────────┐
+                           │                    Data Extraction Layer                        │
+                           │  - Extract technologies using LLM                               │
+                           │  - Extract experience years                                     │
+                           │  - Generate text summaries                                      │
+                           └───────────────────────────────┬─────────────────────────────────┘
+                                                           │
+                                                           ▼
+                           ┌─────────────────────────────────────────────────────────────────┐
+                           │                    Analysis Layer                               │
+                           │  - Asymmetric Jaccard for skills                                │
+                           │  - Experience comparison with penalties                         │
+                           │  - SBERT embeddings and cosine similarity                       │
+                           └───────────────────────────────┬─────────────────────────────────┘
+                                                           │
+                                                           ▼
+                           ┌─────────────────────────────────────────────────────────────────┐
+                           │                    Scoring Layer                                │
+                           │  - Weighted average of component scores                         │
+                           │  - Explanation generation                                       │
+                           │  - Recommendations                                              │
+                           └───────────────────────────────┬─────────────────────────────────┘
+                                                           │
+                                                           ▼
+                           ┌─────────────────────────────────────────────────────────────────┐
+                           │                    Presentation Layer                           │
+                           │  - Interactive Streamlit UI                                     │
+                           │  - Visual score representations                                 │
+                           │  - Detailed analytics tabs                                      │
+                           └─────────────────────────────────────────────────────────────────┘
 ```
 
 ##  Screenshots
