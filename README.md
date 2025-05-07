@@ -14,7 +14,7 @@ This application uses advanced NLP techniques and Large Language Models to analy
 
 ##  Features
 
-- **🔍 Technology Extraction**: Uses LLM to extract technologies mentioned in resumes and job descriptions
+- **🔍 Technology Extraction**: Uses Gemini LLM to extract technologies mentioned in resumes and job descriptions
 - **🧩 Skills Matching**: Implements asymmetric Jaccard similarity to prioritize matches from required skills
 - **📊 Experience Analysis**: Extracts and compares years of experience with penalties for missing years
 - **🔤 Semantic Content Matching**: Uses Sentence-BERT (SBERT) embeddings and cosine similarity to compare resume and job summaries
