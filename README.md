@@ -48,7 +48,7 @@ This application uses advanced NLP techniques and Large Language Models to analy
 
 1. Run the Streamlit app:
    ```bash
-   streamlit run enhanced_ats.py
+   streamlit run ATS.py
    ```
 2. Upload your resume (PDF format)
 3. Enter the job description text
